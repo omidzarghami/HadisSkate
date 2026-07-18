@@ -1,0 +1,45 @@
+---
+description: Workflow کلی پروژه حدیث اسکیت — Git، Stitch، کیفیت کد
+alwaysApply: true
+---
+
+# Project Workflow — Hadis Skate
+
+این rule همیشه اعمال می‌شود. نیازی نیست کاربر هر بار بگوید از قوانین پیروی کن.
+
+## منابع حقیقت
+
+- قوانین کامل: `rules.md`
+- طراحی محصول: `design.md`
+- Design System خام استیچ: `stitch/DESIGN.md`, `stitch/project.json`, `stitch/screens.json`
+- نقشه راه: `ROADMAP.md`
+
+قبل از تصمیم طراحی یا UI، این فایل‌ها را در نظر بگیر. Google Stitch منبع اصلی UI است.
+
+## Git و GitHub
+
+پس از پایان هر واحد کاری منسجم و قابل‌بررسی:
+
+1. `git status` و `git diff` را بررسی کن
+2. lint / type-check / تست‌های مرتبط را در صورت وجود اجرا کن
+3. با Conventional Commits کامیت کن (مثلاً `feat:`, `fix:`, `docs:`)
+4. به شاخه‌ی مرتبط در GitHub push کن (`origin`)
+
+قوانین:
+
+- یک commit = یک واحد کاری مرتبط؛ تغییرات نامرتبط را جدا کن
+- فایل‌های secret / API key / token را هرگز commit نکن
+- «هر تغییر» یعنی واحد کاری کامل، نه هر ذخیره‌ی کوچک فایل
+
+## طراحی و UI
+
+- پیاده‌سازی را با توکن‌ها و اسکرین‌های استیچ هماهنگ نگه دار
+- رابط فارسی: RTL، واکنش‌گرا، mobile-first
+- پس از تغییر Design System یا اسکرین‌ها، فایل‌های `design.md` و `stitch/` را همگام کن
+
+## کیفیت کد
+
+- TypeScript با typeهای صریح؛ از `any` غیرضروری پرهیز کن
+- کامپوننت‌های کوچک، قابل‌استفاده مجدد، نام‌های روشن
+- فقط در محدوده‌ی درخواست کار کن؛ refactor نامرتبط نکن
+- در UI فروشگاه: دسترس‌پذیری، SEO و عملکرد را در نظر بگیر
