@@ -10,6 +10,8 @@ import {
   UnorderedListFeature,
   lexicalEditor,
 } from '@payloadcms/richtext-lexical'
+import { en } from '@payloadcms/translations/languages/en'
+import { fa } from '@payloadcms/translations/languages/fa'
 import path from 'path'
 import { buildConfig } from 'payload'
 import { fileURLToPath } from 'url'
@@ -81,6 +83,31 @@ export default buildConfig({
   //email: nodemailerAdapter(),
   endpoints: [],
   globals: [Header, Footer],
+  i18n: {
+    fallbackLanguage: 'fa',
+    supportedLanguages: { fa, en },
+  },
+  localization: {
+    defaultLocale: 'fa',
+    fallback: true,
+    locales: [
+      {
+        code: 'fa',
+        label: {
+          en: 'Persian',
+          fa: 'فارسی',
+        },
+        rtl: true,
+      },
+      {
+        code: 'en',
+        label: {
+          en: 'English',
+          fa: 'انگلیسی',
+        },
+      },
+    ],
+  },
   plugins,
   secret: process.env.PAYLOAD_SECRET || '',
   typescript: {

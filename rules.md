@@ -24,7 +24,10 @@
 3. پس از تغییر Design System یا اسکرین‌ها، `design.md`، `stitch/DESIGN.md`، `stitch/project.json` و `stitch/screens.json` را همگام کن.
 4. رابط فارسی باید RTL، واکنش‌گرا و mobile-first باشد.
 
-## کیفیت کد
+## زبان و Graphify
+
+1. ادمین و محتوای پیش‌فرض فارسی است (`i18n` + `localization` در Payload).
+2. برای درک ساختار کد، از Graphify استفاده کن (`npm run graphify:update` پس از تغییرات بزرگ).
 
 1. از TypeScript با typeهای صریح استفاده کن و از `any` غیرضروری پرهیز کن.
 2. قبل از تحویل، lint، type-check و تست‌های مرتبط باید موفق باشند.

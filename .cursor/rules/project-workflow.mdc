@@ -13,8 +13,14 @@ alwaysApply: true
 - طراحی محصول: `design.md`
 - Design System خام استیچ: `stitch/DESIGN.md`, `stitch/project.json`, `stitch/screens.json`
 - نقشه راه: `ROADMAP.md`
+- گراف ساختار کد: `graphify-out/graph.json` (قبل از اکتشاف گسترده کد از `graphify query` استفاده کن)
 
 قبل از تصمیم طراحی یا UI، این فایل‌ها را در نظر بگیر. Google Stitch منبع اصلی UI است.
+
+## زبان و i18n
+
+- ادمین Payload و محتوای پیش‌فرض: فارسی (`fa`، RTL)
+- از `i18n` و `localization` در `payload.config.ts` تبعیت کن؛ فیلدهای متنی محصول/صفحه را localized نگه دار
 
 ## Git و GitHub
 

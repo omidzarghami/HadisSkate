@@ -54,3 +54,23 @@ npm run dev
 
 محلی: **SQLite** (`DATABASE_URL=file:./hadisskate.db`) — رایگان و بدون سرویس اضافه.  
 Production روی Vercel: Postgres (مثلاً Neon / Vercel Postgres) توصیه می‌شود.
+
+## فارسی‌سازی (i18n + Localization)
+
+- رابط ادمین Payload با `@payloadcms/translations` روی **فارسی** (`fallbackLanguage: fa`)
+- محتوای CMS با `localization` — locale پیش‌فرض `fa` (RTL) و `en` اختیاری
+- فیلدهای کلیدی محصولات/صفحات/دسته‌ها/مدیا `localized: true` هستند
+
+## Graphify
+
+ساختار پروژه به knowledge graph محلی تبدیل شده (`graphify-out/`) تا معماری وابستگی‌ها قابل query باشد:
+
+```bash
+# یک‌بار نصب CLI (سیستمی)
+uv tool install graphifyy
+
+# به‌روزرسانی گراف بعد از تغییر کد
+npm run graphify:update
+```
+
+خروجی: `graphify-out/graph.json` — rule مربوطه در `.cursor/rules/graphify.mdc`

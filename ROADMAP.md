@@ -19,6 +19,8 @@ CMS/eCommerce: **Payload CMS 3 (قالب Ecommerce رسمی)** + Next.js + SQLit
 - [x] CSS variables از استیچ (پایه در `globals.css`)
 - [x] فونت‌ها: Rubik + Plus Jakarta Sans
 - [x] RTL پایه (`lang=fa` / `dir=rtl`)
+- [x] i18n ادمین Payload (فارسی) + localization محتوا (`fa`/`en`)
+- [x] Graphify برای گراف ساختار کد (`graphify-out/`)
 - [ ] Navbar / Footer مطابق اسکرین Homepage استیچ
 - [ ] هم‌تراز کردن کامل کامپوننت‌ها با Design System استیچ
 
