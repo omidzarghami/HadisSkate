@@ -35,8 +35,8 @@ npm install
 npm run dev
 ```
 
-- فروشگاه: [http://localhost:3000](http://localhost:3000)
-- پنل ادمین: [http://localhost:3000/admin](http://localhost:3000/admin)
+- فروشگاه: [http://localhost:3001](http://localhost:3001)
+- پنل ادمین: [http://localhost:3001/admin](http://localhost:3001/admin)
 
 اولین ورود به `/admin` کاربر ادمین می‌سازد. از ادمین می‌توانید دیتابیس را seed کنید.
 
