@@ -23,7 +23,7 @@ const plusJakarta = Plus_Jakarta_Sans({
 })
 
 export const metadata = {
-  metadataBase: new URL(process.env.NEXT_PUBLIC_SERVER_URL || 'http://localhost:3000'),
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SERVER_URL || 'http://localhost:3001'),
   title: {
     default: 'حدیث اسکیت | Hadis Skate',
     template: '%s | حدیث اسکیت',
