@@ -2,42 +2,55 @@
 
 وب‌سایت فروشگاهی برند اسکیت. دامنه: **[hadisskate.ir](https://hadisskate.ir)**
 
-طراحی UI از **Google Stitch** همگام‌سازی شده است.
+## استک انتخاب‌شده
+
+**[Payload CMS 3](https://payloadcms.com/) + قالب رسمی Ecommerce** روی Next.js
+
+| معیار | چرا Payload |
+|--------|-------------|
+| رایگان | MIT — بدون اشتراک اجباری SaaS |
+| پایدار | Next.js-native، ادمین + API داخل همان اپ |
+| eCommerce | محصولات، واریانت، سبد، سفارش، حساب کاربری |
+| CMS | صفحات، مدیا، SEO plugin، Blog-ready |
+| دیپلوی | سازگار با Vercel (+ Postgres رایگان مثل Neon برای production) |
+
+طراحی UI از **Google Stitch** همگام است (`stitch/`).
+
+> پرداخت پیش‌فرض قالب Stripe است؛ برای ایران بعداً با درگاه ایرانی (مثل زرین‌پال) جایگزین می‌شود.
 
 ## اسناد
 
 | فایل | توضیح |
 |------|--------|
-| [`design.md`](./design.md) | سند طراحی محصول (همگام با استیچ) |
-| [`stitch/DESIGN.md`](./stitch/DESIGN.md) | Design System خام خروجی استیچ |
-| [`stitch/screens.json`](./stitch/screens.json) | فهرست ۱۲ اسکرین استیچ |
-| [`stitch/project.json`](./stitch/project.json) | متادیتا و توکن‌های پروژه استیچ |
-| [`ROADMAP.md`](./ROADMAP.md) | فازبندی اجرا |
+| [`design.md`](./design.md) | سند طراحی محصول |
+| [`stitch/DESIGN.md`](./stitch/DESIGN.md) | Design System استیچ |
+| [`ROADMAP.md`](./ROADMAP.md) | فازبندی |
+| [`rules.md`](./rules.md) | قوانین توسعه |
 
-## استیچ
-
-- پروژه: **Hadis Skate eCommerce UI**
-- ID: `5773998176644107892`
-- سبک: Modern Sports Retail — بنفش `#6100da` / صورتی `#b5005f`
-- فونت: Rubik + Plus Jakarta Sans
-
-### اسکرین‌ها (خلاصه)
-
-Homepage · Product Listing · Search · Categories · Product Detail · Cart · Checkout · My Account · Blog & Academy  
-(+ نسخه‌های موبایل برای Homepage، Product Detail، Cart)
-
-## استک پیشنهادی
-
-- Next.js (App Router) + TypeScript
-- Tailwind CSS (توکن‌ها از استیچ)
-- Vercel + GitHub
-
-## وضعیت فعلی
-
-فایل‌های طراحی و زیرساخت آماده است. کد اپلیکیشن هنوز اضافه نشده.
+## راه‌اندازی محلی
 
 ```bash
-# بعد از ساخت اسکلت:
+cp .env.example .env   # اگر هنوز ندارید
 npm install
 npm run dev
 ```
+
+- فروشگاه: [http://localhost:3000](http://localhost:3000)
+- پنل ادمین: [http://localhost:3000/admin](http://localhost:3000/admin)
+
+اولین ورود به `/admin` کاربر ادمین می‌سازد. از ادمین می‌توانید دیتابیس را seed کنید.
+
+## اسکریپت‌ها
+
+| دستور | کار |
+|-------|-----|
+| `npm run dev` | توسعه |
+| `npm run build` | بیلد production |
+| `npm run start` | اجرای production |
+| `npm run generate:types` | تایپ‌های Payload |
+| `npm run lint` | ESLint |
+
+## دیتابیس
+
+محلی: **SQLite** (`DATABASE_URL=file:./hadisskate.db`) — رایگان و بدون سرویس اضافه.  
+Production روی Vercel: Postgres (مثلاً Neon / Vercel Postgres) توصیه می‌شود.

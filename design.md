@@ -134,11 +134,15 @@
 | لایه | انتخاب |
 |------|--------|
 | فریم‌ورک | Next.js (App Router) + TypeScript |
+| CMS / eCommerce | **Payload CMS 3** (قالب رسمی Ecommerce) — رایگان، MIT |
+| دیتابیس لوکال | SQLite |
+| دیتابیس production | Postgres (Neon / Vercel Postgres) |
 | استایل | Tailwind CSS — توکن‌های رنگ/فاصله از استیچ |
-| کامپوننت | shadcn/ui (سفارشی‌شده با پالت استیچ) |
+| کامپوننت | shadcn/ui (داخل قالب Payload) |
 | میزبانی | Vercel |
-| کنترل نسخه | GitHub (`omidzarghami`) |
+| کنترل نسخه | GitHub (`omidzarghami/HadisSkate`) |
 | طراحی UI | Google Stitch MCP |
+| پرداخت (موقت) | Stripe در قالب؛ بعداً درگاه ایرانی |
 
 ---
 

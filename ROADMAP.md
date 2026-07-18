@@ -1,24 +1,29 @@
 # نقشه‌ی راه — حدیث اسکیت
 
-منبع UI: Google Stitch — `Hadis Skate eCommerce UI` (`5773998176644107892`)
+منبع UI: Google Stitch — `Hadis Skate eCommerce UI` (`5773998176644107892`)  
+CMS/eCommerce: **Payload CMS 3 (قالب Ecommerce رسمی)** + Next.js + SQLite (لوکال)
 
 ## فاز ۰ — زیرساخت
-- [x] تعیین استک فنی (Next.js + TS + Tailwind)
+
+- [x] تعیین استک فنی (Next.js + TS + Tailwind + Payload Ecommerce)
 - [x] اتصال Vercel (`omidzarghami`)
-- [x] اتصال GitHub (`omidzarghami`)
+- [x] اتصال GitHub (`omidzarghami` / HadisSkate)
 - [x] اتصال Stitch MCP و همگام‌سازی Design System
-- [ ] ساخت اسکلت Next.js با توکن‌های رنگ/فونت استیچ
-- [ ] ریپازیتوری GitHub برای این پروژه
+- [x] ساخت اسکلت Next.js + Payload با توکن‌های رنگ/فونت استیچ و RTL پایه
+- [x] ریپازیتوری GitHub برای این پروژه
 - [ ] دیپلوی اولیه روی Vercel
 - [ ] اتصال دامنه `hadisskate.ir`
 
 ## فاز ۱ — هویت بصری و شِل
-- [ ] CSS variables از `stitch/DESIGN.md` / `stitch/project.json`
-- [ ] فونت‌ها: Rubik + Plus Jakarta Sans (+ پشتیبان فارسی)
-- [ ] Navbar / Footer مطابق اسکرین Homepage
-- [ ] RTL کامل
+
+- [x] CSS variables از استیچ (پایه در `globals.css`)
+- [x] فونت‌ها: Rubik + Plus Jakarta Sans
+- [x] RTL پایه (`lang=fa` / `dir=rtl`)
+- [ ] Navbar / Footer مطابق اسکرین Homepage استیچ
+- [ ] هم‌تراز کردن کامل کامپوننت‌ها با Design System استیچ
 
 ## فاز ۲ — صفحات اصلی (طبق اسکرین‌های استیچ)
+
 - [ ] Homepage (Desktop + Mobile)
 - [ ] Product Listing + Search Results
 - [ ] Categories
@@ -26,16 +31,21 @@
 - [ ] Blog & Academy
 
 ## فاز ۳ — خرید
-- [ ] Shopping Cart (Desktop + Mobile)
+
+- [ ] Shopping Cart (Desktop + Mobile) — پلاگین ecommerce موجود؛ UI باید با استیچ هم‌خوان شود
 - [ ] Checkout
 - [ ] My Account
-- [ ] درگاه پرداخت (تصمیم‌گیری لازم)
+- [ ] جایگزینی Stripe با درگاه پرداخت ایرانی
 
 ## فاز ۴ — سئو و پولیش
+
 - [ ] متادیتا + JSON-LD
 - [ ] `sitemap.xml` / `robots.txt`
 - [ ] بهینه‌سازی تصویر و Core Web Vitals
 - [ ] هم‌خوانی پیکسلی با اسکرین‌های استیچ
 
-## فاز ۵ — محتوا (اختیاری)
-- [ ] CMS برای محصولات و Blog & Academy
+## فاز ۵ — محتوا
+
+- [x] CMS محصولات / صفحات / سفارش‌ها (Payload Admin)
+- [ ] مدل و UI برای Blog & Academy
+- [ ] Seed فارسی نمونه محصولات
